@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <script src="all.js"></script> -->
+    <!-- ######## swiiper cdn ################### -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!--=================== font awsome link========================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <div class="header__logo">
+                <div class="inner_img">
+                    <img src="./webImages/logo.jpg" alt="logo">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+<nav class="nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Up Coming projects</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+    <div class="box">
+
+    </div>
+    <div class="para">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi ipsam corporis, possimus voluptatem earum
+            blanditiis aperiam deleniti minima laudantium quam reiciendis neque libero cumque commodi molestias tempore
+            qui quia accusamus reprehenderit a ut repudiandae? Vitae, nam fuga. Sequi necessitatibus nihil ipsam quas
+            minima voluptatum praesentium voluptatibus suscipit dolor distinctio molestiae facilis repellat error vitae
+            dicta modi libero, assumenda soluta fugit. Fuga quis sint quaerat est tempora reprehenderit blanditiis
+            possimus vel corporis harum, itaque suscipit, error culpa nemo labore nesciunt fugit nisi, commodi ipsum
+            consectetur. Qui, itaque explicabo. Fuga aperiam, laborum libero perspiciatis tempora facilis saepe, vero ea
+            repudiandae delectus cumque.</p>
+    </div>
+    <div class="btn">
+        <button class="btn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop()>20){
+            $('.btn').fadeIn();
+        }else{
+            $('.btn').fadeOut();
+        }
+    })
+    $('.btn').click(function(){
+        $('html').animate({scrollTop:0},300);    
+    })
+
+$(window).scroll(function(){
+    if($(this).scrollTop()>10){
+        $('.header').addClass('active');
+        $('.header nav ul li a').addClass('white');  
+    }else{
+        $('.header').removeClass('active');
+        $('.header a').removeClass('white');  
+    }
+})
+
+})
+    </script>
+</body>
+
+</html>
